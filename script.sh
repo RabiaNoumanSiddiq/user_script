@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set username and password
-username="temp"
-password="temp"
+username="edu"
+password="edu"
 
 # Create user with password
 sudo useradd -m -s /bin/bash "$username" && echo "$username:$password" | sudo chpasswd
