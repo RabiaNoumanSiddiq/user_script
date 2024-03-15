@@ -14,4 +14,6 @@ sudo usermod -aG sudo "$username"
 echo "$username ALL=(ALL) NOPASSWD:ALL" | sudo tee "/etc/sudoers.d/$username"
 
 # Switch to the new user and execute additional commands
-sudo -u "$username"
+sudo -u "$username" bash << EOF
+echo "User: \$USER"
+EOF
